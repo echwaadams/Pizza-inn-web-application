@@ -19,7 +19,7 @@ body
 .nav
 {
     position: relative;
-    
+
     float: left;
 }
 #pizza
@@ -32,4 +32,22 @@ li
 {
     display: inline;
     margin-right: 20px;
+}
+
+/* HERO SECTION */
+.exp
+{
+    color: yellow;
+}
+
+/* button */
+.h-buttons
+{
+    margin-top: 90px;
+    margin-bottom: 100px;
+}
+.h-buttons button
+{
+    border-radius: 40px;
+    color: #000;
 }
