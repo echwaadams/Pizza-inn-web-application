@@ -8,11 +8,13 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/font-awesome.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.7/css/mdb.min.css" rel="stylesheet">
     <title>Pizza Inn Web Application</title>
     <link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
 <body>
-    <!-- navigation -->
+  <div class="container-fluid">
+        <!-- navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
         <h1 id="pizza" class="piz">Pi<span id="spatxt">zz</span>a Inn</h1>
         <div class="nav">
@@ -46,7 +48,7 @@
                 <div class="col-sm-6">
                     <img src="images/chad-montano-MqT0asuoIcU-unsplash.jpg" class="well-img" alt="" width="400" height="400">
                 </div>
-                <div class="col-md-6 wel-txt">
+                <div class="col-md-6 well-txt">
                     <h1 class="text-center txt txt-big">Welcome <span class="pizz">To Pizza </span>
                     <span class="exc">Inn</span></h1>
                     <p class="text-center txt">Order your pizza and we wil deliver it to your location.</p>
@@ -59,26 +61,26 @@
 
     </div>
     <!-- MENU SECTION -->
-    <div id="menus"></div>
+    <div id="menus" class="menu"></div>
     <br><br>
     <div class="menu col-md-12">
         <div class="menu-overlay">
             <h1 class="text-center text-white" id="menu">Menu</h1>
             <div class="pizmenu row text-center">
                 <figure class="col-sm-4">
-                    <img src="images/3.png" alt="">
+                    <img src="images/2.png" alt="">
                     <figcaption class="text-white">Small <br>Ksh. 400</figcaption>
                 </figure>
             </div>
             <div class="pizmenu row text-center">
                 <figure class="col-sm-4">
-                    <img src="images/2.png" alt="">
+                    <img src="images/1.png" alt="">
                     <figcaption class="text-white">Medium <br>Ksh. 900</figcaption>
                 </figure>
             </div>
             <div class="pizmenu row text-center">
                 <figure class="col-sm-4">
-                    <img src="images/1.png" alt="">
+                    <img src="images/3.png" alt="">
                     <figcaption class="text-white">Large <br>Ksh. 1400</figcaption>
                 </figure>
             </div>
@@ -164,9 +166,9 @@
         </div>
     </div>
     <!-- CONTACT SECTION -->
-    <div class="contacts">
+    <div class="contacts" id="contact">
         <div class="contacts-overlay">
-            <h1 class="text-centerc ontact text-white">Contacts</h1>
+            <h1 class="text-center contact text-white">Contacts</h1>
             <div class="row">
                 <div class="col-sm-1">
                     <div class="col-sm-5 subs">
@@ -191,6 +193,8 @@
             </div>
         </div>
     </div>
+  </div>
     
 </body>
+<script src="js/script.js"></script>
 </html>
