@@ -51,3 +51,19 @@ li
     border-radius: 40px;
     color: #000;
 }
+
+/* WELCOME PAGE */
+.menu-btn
+{
+    border-radius: 20px;
+    margin-top: 20px;
+    color: #000;
+}
+figcaption
+{
+    font-family: 'Poiret', sans-serif;
+}
+#menus
+{
+    padding-top: 20px;
+}
