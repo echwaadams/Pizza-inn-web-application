@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/font-awesome.css">
     <title>Pizza Inn Web Application</title>
     <link rel="stylesheet" href="css/style.css" type="text/css">
@@ -43,7 +44,7 @@
         <div class="col-sm-12">
             <div class="row">
                 <div class="col-sm-6">
-                    <img src="images/chad-montano-MqT0asuoIcU-unsplash.jpg" alt="" width="400" height="400">
+                    <img src="images/chad-montano-MqT0asuoIcU-unsplash.jpg" class="well-img" alt="" width="400" height="400">
                 </div>
                 <div class="col-md-6 wel-txt">
                     <h1 class="text-center txt txt-big">Welcome <span class="pizz">To Pizza </span>
@@ -131,13 +132,41 @@
                     <option value="chicken">Periperi Chicken @ sh. 170</option>
                 </select>
                 <label for="number">Number of Pizza Ordered</label>
-                <input type="number" class="form-control" id="number" placeholder="Number of Pizza Ordered" min="1" required>
+                <input type="number" class="form-control" id="number" placeholder="Number of Pizza 
+                Ordered" min="1" required>
                 </form>
                 <a href="#total">
                     <button type="submit" class="btn btn-success checkout" id="checkout">checkout</button>
                 </a>
             </div>
             <div class="col-sm-2"></div>
+        </div>
+    </div>
+    <!-- SUMMARY FOR THE CUSTOMER PIZZA ORDER -->
+    <div class="summary" id="summary">Order Summary</div>
+    <h2 class="text-center summary">Hello there, your order is as follows:</h2>
+    <ol id="list" class="text-center summary"></ol>
+    <div class="cdata-overlay">
+        <div class="customerdata row">
+            <div class="col-sm-3"></div>
+            <form action="" class="form-group col-sm-6 data">
+                <input type="text" class="form-control cdata" placeholder="Enter your Name:">
+                <input type="text" class="form-control cdata" placeholder="Enter your phone number: ">
+                <input type="text" class="form-control cdata" placeholder="Enter the location: ">
+                <button class="btn bg-info text-center d-block mx-auto go">Make Delivery</button>
+            </form>
+
+            <div class="col-sm-3"></div>
+        </div>
+        <div class="d-block mx-auto text-center">
+            <button class='deliver'>Make Delivery</button>
+            <button class='delivernot'>Pick Up</button>
+        </div>
+    </div>
+    <!-- CONTACT SECTION -->
+    <div class="contacts">
+        <div class="contacts-overlay">
+
         </div>
     </div>
     
