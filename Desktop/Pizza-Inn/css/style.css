@@ -1,1 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Poiret',sans-serif;
+}
+body
+{
+    overflow: hidden;
+}
+/* navigation bar */
+#spatxt
+{
+    color: yellow;
+}
+.nav
+{
+    position: relative;
+    
+    float: left;
+}
+#pizza
+{
+    font-size: 35px;
+    font-weight: normal;
+    color: darkorange;
+}
+li
+{
+    display: inline;
+    margin-right: 20px;
+}
