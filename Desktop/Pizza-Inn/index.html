@@ -8,12 +8,13 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/font-awesome.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.7/css/mdb.min.css" rel="stylesheet">
+    <script src="jquery-3.5.1.min.js"></script>
     <title>Pizza Inn Web Application</title>
     <link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
 <body>
   <div class="container-fluid">
+
         <!-- navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
         <h1 id="pizza" class="piz">Pi<span id="spatxt">zz</span>a Inn</h1>
@@ -25,6 +26,7 @@
             </ul>
         </div>
     </nav>
+
     <!-- Hero section -->
     <div class="hero">
         <div class="overlay">
@@ -40,6 +42,7 @@
             </div>
         </div>
     </div>
+
     <!-- welcome page -->
     <div class="welcome" id="welcome">
         <br><br><br>
@@ -60,6 +63,7 @@
         </div>
 
     </div>
+
     <!-- MENU SECTION -->
     <div id="menus" class="menu"></div>
     <br><br>
@@ -86,95 +90,173 @@
             </div>
         </div>
     </div>
+
     <!-- ORDER SECTION -->
-    <div class="orders" id="order">
-        <h1 class="text-center" id="ordpiz">Order Pizza</h1>
-        <div class="form-group row">
-            <div class="col-sm-2"></div>
-            <div class="col-sm-8 order-overlay text-center">
-                <form action="" class="col-sm-6 offset-sm-3 text-center">
-                    <label for="flavour">Flavour:</label>
-                    <select class="custom-select custom-select-md mb-3 flavour" required>
-                        <option value="tikka">Veg Tikka</option>
-                        <option value="chicken">Chicken Tikka</option>
-                        <option value="periperi">Peri-Peri Chicken</option>
-                        <option value="bbq">BBQ Steak</option>
-                        <option value="boer">Boerewors</option>
-                        <option value="hawai">Hawaiian</option>
-                        <option value="mushroom">Chicken and Mushroom</option>
-                        <option value="regpizza">Regina Pizza</option>
-                    </select>
-                    <label>Preferred Size:</label>
-                    <select class="custom-select custom-select-md mb-3" id="size" required>
-                        <option value="small">Small</option>
-                        <option value="medium">Medium</option>
-                        <option value="large">Large</option>
-                    </select>
-                    <label for="crust">Favorite Crust:</label>
-                    <select class="custom-select custom-select-md mb-3" id="crust" required>
-                        <option value="thin">Thin Crust @ Ksh. 100</option>
-                        <option value="thick">Thick Crust @ Ksh. 150</option>
-                        <option value="flatbread">FlatBread Crust @ sh. 180</option>
-                        <option value="custom">Custom Crust @ sh. 280</option>
-                    </select>
-                    <label>Favourite Toppings</label>
-                <select class="custom-select custom-select-md mb-3" id="toppings" required>
-                    <option value="tomato">Tomato @ sh. 80</option>
-                    <option value="onions">Onions @ sh. 80</option>
-                    <option value="mushroom">Mushroom @ sh. 80</option>
-                    <option value="pepper">Green Pepper @ sh. 80</option>
-                    <option value=""></option>
-                    <option value="olives">Olives @ sh. 120</option>
-                    <option value="pineapple">Pineapple @ sh. 120</option>
-                    <option value="sweetcorn">Sweet Corn @ sh. 120</option>
-                    <option value="macon">Macon @ sh. 120</option>
-                    <option value="mince">Mince @ sh. 120</option>
-                    <option value=""></option>
-                    <option value="beef">Beef Peperoni @ sh. 170</option>
-                    <option value="chicken">Periperi Chicken @ sh. 170</option>
-                </select>
-                <label for="number">Number of Pizza Ordered</label>
-                <input type="number" class="form-control" id="number" placeholder="Number of Pizza 
-                Ordered" min="1" required>
-                </form>
-                <a href="#total">
-                    <button type="submit" class="btn btn-success checkout" id="checkout">checkout</button>
-                </a>
-            </div>
-            <div class="col-sm-2"></div>
-        </div>
-    </div>
-    <!-- SUMMARY FOR THE CUSTOMER PIZZA ORDER -->
-    <div class="summary" id="summary">Order Summary</div>
-    <h2 class="text-center summary">Hello there, your order is as follows:</h2>
-    <ol id="list" class="text-center summary"></ol>
-    <div class="cdata-overlay">
-        <div class="customerdata row">
-            <div class="col-sm-3"></div>
-            <form action="" class="form-group col-sm-6 data">
-                <input type="text" class="form-control cdata" placeholder="Enter your Name:">
-                <input type="text" class="form-control cdata" placeholder="Enter your phone number: ">
-                <input type="text" class="form-control cdata" placeholder="Enter the location: ">
-                <button class="btn bg-info text-center d-block mx-auto go">Make Delivery</button>
+    <div class="col-md-12 section-2">
+        <div class="Selection">
+            <h1 class="text-center">Pizza Style</h1>
+
+            <form id="pizza-style">
+                <div class="row">
+                    <div class="form-group col-md-4">
+                        <label for="">Size</label>
+                        <select id="size" class="form-control">
+                            <option>small</option>
+                            <option>medium</option>
+                            <option>large</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="">Crust</label>
+                        <select id="crust" class="form-control">
+                            <option>Pizza Bagels</option>
+                            <option>Thin Crust</option>
+                            <option>Neapolitan Crust</option>
+                            <option>Flatbread</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group col-md-4">
+                        <h6>Toppings</h6>
+                        <div class="form-check">
+                            <input class="form-check-input topping" type="checkbox"
+                                value="Margheritta: Tomato,cheese,oregano" id="check1">
+                            <label class="form-check-label" for="check1">
+                                Margheritta: Tomato,cheese,oregano
+                            </label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input topping" type="checkbox"
+                                value="Napoletana: Tomato,anchovies,garlic" id="check2">
+                            <label class="form-check-label" for="check2">
+                                Napoletana: Tomato,anchovies,garlic
+                            </label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input topping" type="checkbox"
+                                value="Prosciuto:Tomato,cheese,ham,olives" id="check3">
+                            <label class="form-check-label" for="check3">
+                                Prosciuto:Tomato,cheese,ham,olives
+                            </label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input topping" type="checkbox"
+                                value="Funghi: Tomato,cheese,mushrooms" id="check4">
+                            <label class="form-check-label" for="check4">
+                                Funghi: Tomato,cheese,mushrooms
+                            </label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input topping" type="checkbox"
+                                value="Romana: Tomato,chesse,tuna, onion" id="check5">
+                            <label class="form-check-label" for="check5">
+                                Romana: Tomato,chesse,tuna, onion
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group col-md-4 checkout">
+                    <button type="submit"> Continue</button>
+                </div>
             </form>
 
-            <div class="col-sm-3"></div>
         </div>
-        <div class="d-block mx-auto text-center">
-            <button class='deliver'>Make Delivery</button>
-            <button class='delivernot'>Pick Up</button>
-        </div>
+    </div>
+  
+
+    <!-- SUMMARY FOR THE CUSTOMER PIZZA ORDER -->
+    <div class=" col-md-12 section-3 hidden">
+        <form id="order-quantity">
+            <div class="row text-center">
+                <div class="form-group col-md-6">
+                    <p><strong>Price per pizza :</strong><span id="one-pizza-price"></span></p>
+                </div>
+                <div class="form-group col-md-4">
+                    <div>
+                        <label for="quantity">Choose Order Quantity</label>
+                        <input type="number" id="quantity" class="form-control" min="1" value="1" id="order" required>
+                        </input>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group col-md-4 checkout">
+                <button type="submit"> Continue</button>
+            </div>
+        </form>
+    </div>
+    <div class=" col-md-12 section-4 hidden">
+        <form id="pizza-delivery">
+            <div class="row text-center">
+                <div class="form-group col-md-12">
+
+                    <strong>Delivery</strong>
+                    <div class="row col-md-12">
+                        <div class="form-control col-md-6">
+                            <input type="radio" id="n_delivery" checked name="delivery"> No
+                        </div>
+                        <div class="form-control col-md-6">
+                            <input type="radio" id="y_delivery" name="delivery"> Yes
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group col-md-4 checkout">
+                <button type="submit"> Checkout</button>
+            </div>
+        </form>
+    </div>
+    <div class=" col-md-12 section-5 hidden">
+        <form id="lst-form">
+            <div class="row text-center">
+                <div class="form-group col-md-12">
+
+                    <p><strong>Pizza Order: </strong></p>
+
+                    <div class="row col-md-12">
+                        <div class="col-md-4">
+                            Size: <span id="chosen-size"></span>
+                        </div>
+                        <div class="col-md-4">
+                            Crust: <span id="chosen-crust"></span>
+                        </div>
+                        <div class="col-md-4">
+                            Toppings: <span id="chosen-toppings"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-md-12">
+
+                    <p><strong>Delivery: </strong><span id="delivery-details"></span></p>
+                </div>
+                
+                <div class="form-group col-md-12">
+
+                    <p><strong>Total amount: </strong><span id="total-amount"></span></p>
+                </div>
+            </div>
+            <div class="form-group col-md-4 checkout">
+                <button type="submit"> Reset</button>
+            </div>
+        </form>
     </div>
     <!-- CONTACT SECTION -->
     <div class="contacts" id="contact">
         <div class="contacts-overlay">
-            <h1 class="text-center contact text-white">Contacts</h1>
+            <h1 class="text-center contact text-black">Contacts</h1>
             <div class="row">
-                <div class="col-sm-1">
-                    <div class="col-sm-5 subs">
+                <div class="col-sm-12 text-center ">
+                    <div class="col-sm-6 subs">
+                        <br><br><br>
                         <h1 class="text-center text-white">Call Us</h1>
-                        <p class="text-center">+254 1663 2313</p>
-                        <form action="">
+                        <p class="text-center text-white">+254 1663 2313</p>
+                        <form action="" id="form">
                             <div class="email-info">
                                 <div class="form-groupfill-all-form">
                                     <input type="email" class="form-control bg-transparent email" id="email" placeholder="Email" required>
@@ -185,16 +267,23 @@
                             </div>
                         </form>
                     </div>
-                    <div class="col-sm-5">
-                        <h4 class="text-center get-pizza">We love feedback..send us a mail</h4>
+                    <div class="col-sm-6">
+                        <h4 class="text-center text-white get-pizza">We love feedback..send us a mail</h4>
                     </div>
-                    <div class="col-sm-1"></div>  
+                    <div class="col-sm-2"></div>  
                 </div>
             </div>
         </div>
     </div>
   </div>
+  <div class="footer text-center">
+
+    <h4>The PizzaInn</h4>
+    <p class="des">&copy; All rights reserved,Designed by Adams Echwa</p>
+
+</div>
     
 </body>
 <script src="js/script.js"></script>
+<script src="js/jquery-3.5.1.js"></script>
 </html>
